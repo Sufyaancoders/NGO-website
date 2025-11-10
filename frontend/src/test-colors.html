@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Test</title>
+    <style>
+        :root {
+            --primary: 43 100% 47%;
+            --primary-foreground: 0 0% 100%;
+            --secondary: 229 47% 17%;
+            --secondary-foreground: 0 0% 100%;
+        }
+        
+        .test-primary {
+            background-color: hsl(var(--primary));
+            color: hsl(var(--primary-foreground));
+            padding: 10px;
+            margin: 10px;
+        }
+        
+        .test-secondary {
+            background-color: hsl(var(--secondary));
+            color: hsl(var(--secondary-foreground));
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-primary">Primary Color Test (Golden)</div>
+    <div class="test-secondary">Secondary Color Test (Navy)</div>
+</body>
+</html>
