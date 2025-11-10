@@ -1,11 +1,10 @@
-
 import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+   const navigate = useNavigate();
   const navItems = [
     { label: "HOME", path: "/" },
     { label: "TOOLS", path: "/tools" },
@@ -52,7 +51,7 @@ const Navbar = () => {
               <button
                 key={item.path}
                 className="text-sm font-medium tracking-wider text-muted-foreground hover:text-yellow-500 transition-colors cursor-pointer pb-1 border-b-2 border-transparent hover:border-yellow-400"
-                onClick={() => console.log(`Navigate to: ${item.path}`)}
+                onClick={() => navigate(item.path)}
               >
                 {item.label}
               </button>
@@ -65,7 +64,7 @@ const Navbar = () => {
               variant="donation"
               size="donation"
               className="w-40 mr-6"
-              onClick={() => console.log('Navigate to donations')}
+              onClick={() => navigate('/donations')}
             >
               MAKE A DONATION
             </Button>
@@ -90,7 +89,7 @@ const Navbar = () => {
                   key={item.path}
                   className="text-sm font-medium tracking-wider text-muted-foreground hover:text-primary transition-colors text-left pb-2 border-b-2 border-transparent hover:border-yellow-500"
                   onClick={() => {
-                    console.log(`Navigate to: ${item.path}`);
+                    navigate(item.path);
                     setIsOpen(false);
                   }}
                 >
@@ -101,7 +100,7 @@ const Navbar = () => {
                 variant="secondary" 
                 size="lg" 
                 className="font-heading font-bold tracking-wider w-full"
-                onClick={() => console.log('Navigate to donations')}
+                onClick={() => navigate('/donations')}
               >
                 MAKE A DONATION
               </Button>

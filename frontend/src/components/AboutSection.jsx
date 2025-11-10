@@ -2,6 +2,7 @@ import { Button } from "../components/ui/button";
 import { Play, Pause } from "lucide-react";
 import heroPortrait from "../assets/hero-portrait.jpg";
 import { useState, useRef } from "react";
+import { NationalMovement } from "./NationalMovement";
 
 const AboutSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -20,7 +21,7 @@ const AboutSection = () => {
 
   return (
     <div>
-    <section className="min-h-screen grid bg-[gray] grid-cols-1 relative  lg:grid-cols-2">
+    <section className="min-h-screen grid grid-cols-1 relative  lg:grid-cols-2">
       {/* Left Side - Video */}
       <div className="relative bg-black flex items-center justify-center overflow-hidden">
         <video 
@@ -79,10 +80,12 @@ const AboutSection = () => {
           </Button>
         </div>
       </div>
-      <div className="position " >
-
-      </div>
+     
+      
     </section>
+    <div className="bg-[grey] relative">
+        <NationalMovement   />
+    </div>
     </div>
   );
 };
