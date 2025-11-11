@@ -7,7 +7,7 @@ import campaignJustice from "../assets/slums/boy_slums.jpg";
 import campaignInvestigation from "../assets/slums/campaign-investigation.jpg";
 import campaignCommunity from "../assets/slums/lifeinsideslums.jpg";
 import campaignEducation from "../assets/slums/poor.jpg";
-import campaignLegal from "../assets/slums/poor-boy.jpg";
+import campaignLegal from "../assets/slums/poor_boy.jpg";
 
 const campaigns = [
   {
@@ -42,7 +42,7 @@ const campaigns = [
   },
 ];
 
-export const CampaignsCarousel = () => {
+const CampaignsCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
     align: "start",
     containScroll: "trimSnaps",
@@ -58,10 +58,10 @@ export const CampaignsCarousel = () => {
   };
 
   return (
-    <section className="py-16 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between mb-12 animate-slide-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground uppercase tracking-tight">
+    <section className="py-20  bg-white relative w-full z-10">
+      <div className="container mx-auto px-4 ">
+        <div className="flex items-center justify-between mb-14 animate-slide-in">
+          <h2 className="text-4xl md:text-5xl font-bold ml-4 underline line-clamp-1 text-black uppercase tracking-tight">
             Current Campaigns
           </h2>
           <div className="flex gap-2">
@@ -69,23 +69,23 @@ export const CampaignsCarousel = () => {
               variant="outline"
               size="icon"
               onClick={scrollPrev}
-              className="border-2 border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
+              className="border-2 border-black hover:bg-gray-300 transition-all duration-300 hover:scale-110"
             >
-              <ChevronLeft className="h-6 w-6" />
+              <ChevronLeft className="h-7 w-7" />
             </Button>
             <Button
               variant="outline"
               size="icon"
               onClick={scrollNext}
-              className="border-2 border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
+              className="border-2 border-black hover:bg-gray-300 transition-all duration-300 hover:scale-110"
             >
-              <ChevronRight className="h-6 w-6" />
+              <ChevronRight className="h-7 w-7" />
             </Button>
           </div>
         </div>
 
         <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex gap-6">
+          <div className="flex gap-6 px-4"> 
             {campaigns.map((campaign) => (
               <CampaignCard
                 key={campaign.id}
@@ -98,6 +98,9 @@ export const CampaignsCarousel = () => {
           </div>
         </div>
       </div>
+   
     </section>
   );
 };
+
+export default CampaignsCarousel;
