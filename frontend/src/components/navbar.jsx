@@ -17,7 +17,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 border-b border-border ">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-border ">
       {/* Debug color test */}
       {/* <div className="container mx-auto px-6">
         <div className="flex gap-4 py-2 text-sm">
@@ -40,6 +40,7 @@ const Navbar = () => {
               <div className="text-sm tracking-wider">HUMAN</div>
               <div className="text-sm tracking-wider">RIGHTS</div>
             </div>
+             <div className="h-12 w-px bg-border mx-2 hidden md:block" />
           </div>
 
           {/* Desktop Navigation */}
