@@ -85,7 +85,7 @@ const CampaignsCarousel = () => {
         </div>
 
         <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex gap-6 px-4"> 
+          <div className="flex gap-6 px-4 "> 
             {campaigns.map((campaign) => (
               <CampaignCard
                 key={campaign.id}

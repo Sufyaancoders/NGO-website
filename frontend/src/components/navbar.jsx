@@ -2,6 +2,7 @@ import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import placeholderLogo from "../assets/logo/logo_page-0001.jpg";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
    const navigate = useNavigate();
@@ -12,7 +13,7 @@ const Navbar = () => {
     { label: "DONATIONS", path: "/donations" },
     { label: "BLOG", path: "/blog" },
     { label: "PETITION", path: "/petition" },
-    { label: "CONTACTS", path: "/contacts" },
+    { label: "CONTACT", path: "/contact" },
   ];
 
   return (
@@ -32,12 +33,8 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20 ">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
-              <div className="w-8 h-8 flex items-center justify-center">
-                <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-secondary-foreground">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" fill="currentColor"/>
-                </svg>
-              </div>
+            <div className="w-12 h-12 flex items-center justify-center overflow-hidden rounded-full">
+              <img src={placeholderLogo} alt="Placeholder Logo" className="w-full h-full object-cover" />
             </div>
             <div className="font-heading font-bold text-foreground leading-tight">
               <div className="text-sm tracking-wider">HUMAN</div>

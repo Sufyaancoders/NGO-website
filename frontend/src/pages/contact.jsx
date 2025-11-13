@@ -1,9 +1,12 @@
 import React from "react";
+import CommunitySection from "../components/contectsection.jsx";
+import ContactForm from "@/components/ContactForm.jsx";
+
  const Contact = () => {
         return (
-            <div>
-                <h1>Contact Page</h1>
-                <p>Welcome to the Contact Page!</p>
+            <div className="">
+             <CommunitySection />
+             <ContactForm />
             </div>
         );
     }

@@ -55,7 +55,7 @@ const PetitionSection = () => {
           </div>
           
           {/* Right Column - Sign Up Box */}
-          <div className="bg-blue-900 p-8 md:p-10 h-fit">
+          <div className="bg-blue-900 p-6 md:p-22 h-fit">
             <h2 className="text-3xl md:text-4xl font-bold text-yellow-500 mb-6">
               Sign the petition!
             </h2>

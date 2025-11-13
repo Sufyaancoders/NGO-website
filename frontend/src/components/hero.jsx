@@ -80,7 +80,7 @@ const Hero = () => {
               >
                 {/* Tag */}
                 <div className="inline-flex items-center gap-2 mb-6">
-                  <div className="w-8 h-0.5 bg-primary" />
+                  <div className="w-8 h-0.5 bg-yellow-500" />
                   <span className="text-yellow-500 font-heading font-bold tracking-widest text-sm">
                     {slide.tag}
                   </span>
@@ -126,7 +126,7 @@ const Hero = () => {
       {/* Scrollable Content Container - This will slide over the fixed hero */}
       <div className="relative z-50 bg-white">
         <section className="text-gray-600 body-font">
-          <div className="container px-5 py-24 mx-auto">
+          <div  className="container px-5 py-24 mx-auto">
             <div className="flex flex-col text-center w-full mb-20">
               <h2 className="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">ROOF PARTY POLAROID</h2>
               <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Master Cleanse Reliac Heirloom</h1>

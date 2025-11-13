@@ -35,7 +35,7 @@ const SocialAwarenessSection = () => {
   };
 
   return (
-    <div className="w-full  absolute z-10">
+    <div className="w-full  relative z-10">
       <div className="grid lg:grid-cols-2 gap-0">
         {/* Statistics Section */}
         <div className="bg-[#0d3055] text-black p-6 md:p-6 lg:p-12 flex flex-col justify-center">
@@ -112,7 +112,7 @@ const SocialAwarenessSection = () => {
                   <Button
                     type="submit"
                     size="lg"
-                    className="bg-[gray] hover:bg-[#4d4a4a] text-muted-foreground font-bold uppercase tracking-wider px-8 h-14 text-sm"
+                    className="bg-[gray] hover:bg-[#4d4a4a] text-white font-bold uppercase tracking-wider px-8 h-14 text-sm"
                   >
                     Subscribe
                   </Button>

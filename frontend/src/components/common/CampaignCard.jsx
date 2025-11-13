@@ -3,7 +3,7 @@ import { Card, CardContent } from "../ui/card";
 
 export const CampaignCard = ({ image, title, description, onReadMore }) => {
   return (
-    <Card className="border-0 shadow-none bg-sky-100 overflow-hidden shrink-0 w-full md:w-[450px] animate-fade-scale group">
+    <Card className="border-0 shadow-none bg-sky-100 overflow-hidden shrink-0  w-full md:w-[450px] animate-fade-scale group">
       <div className="relative h-60 w-full overflow-hidden ">
         <img
           src={image}
