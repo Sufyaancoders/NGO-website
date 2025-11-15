@@ -1,11 +1,11 @@
 import { Button } from "../components/ui/button";
 import { Facebook, Twitter } from "lucide-react";
-import petitionHero from "../assets/petition-hero.jpg";
+import petitionHero from "../assets/hands-palm.avif";
 
 const PetitionSection = () => {
   return (
-    <section className="py-16 px-6 md:px-12 lg:px-20 bg-white relative w-full z-10">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-16 px-6 md:px-12 lg:px-10 bg-white relative w-full z-10">
+      <div className="max-w-8xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
           {/* Left Column - Content */}
           <div className="space-y-6">
@@ -15,7 +15,7 @@ const PetitionSection = () => {
               </span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-petition-heading leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-petition-heading leading-tight">
               CHARITY FUNDS FOR FAMILIES
             </h1>
             
@@ -23,11 +23,11 @@ const PetitionSection = () => {
               Free and equal citizens is what we stand for. We demand that the social issues are resolved at the government level.
             </p>
             
-            <div className="relative w-full aspect-[3/2] overflow-hidden">
+            <div className="relative w-full aspect-[2/1] overflow-hidden">
               <img 
                 src={petitionHero} 
                 alt="Community members standing together for justice" 
-                className="w-full h-full object-cover"
+                className="w-full h-[55vh] object-cover"
               />
             </div>
             

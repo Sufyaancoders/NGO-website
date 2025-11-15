@@ -59,7 +59,7 @@ const CampaignsCarousel = () => {
 
   return (
     <section className="py-20  bg-white relative w-full z-10">
-      <div className="container mx-auto px-4 ">
+      <div className="container mx-auto px-10 ">
         <div className="flex items-center justify-between mb-14 animate-slide-in">
           <h2 className="text-4xl md:text-5xl font-bold ml-4 underline line-clamp-1 text-black uppercase tracking-tight">
             Current Campaigns

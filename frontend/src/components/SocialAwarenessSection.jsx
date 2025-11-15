@@ -41,7 +41,7 @@ const SocialAwarenessSection = () => {
         <div className="bg-[#0d3055] text-black p-6 md:p-6 lg:p-12 flex flex-col justify-center">
           <div className="max-w-xl">
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-0.5 w-12 bg-primary"></div>
+              <div className="h-0.5 w-12 bg-yellow-500"></div>
               <span className="text-white text-sm font-bold tracking-widest uppercase">
                 Statistics
               </span>

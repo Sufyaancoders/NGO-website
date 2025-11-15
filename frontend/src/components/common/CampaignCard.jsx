@@ -3,8 +3,8 @@ import { Card, CardContent } from "../ui/card";
 
 export const CampaignCard = ({ image, title, description, onReadMore }) => {
   return (
-    <Card className="border-0 shadow-none bg-sky-100 overflow-hidden shrink-0  w-full md:w-[450px] animate-fade-scale group">
-      <div className="relative h-60 w-full overflow-hidden ">
+    <Card className="border-2 shadow-none bg-sky-100 overflow-hidden shrink-0  w-full md:w-[450px] animate-fade-scale group">
+      <div className="relative h-30 sm:h-40 lg:h-60 w-full overflow-hidden ">
         <img
           src={image}
           alt={title}
@@ -12,8 +12,8 @@ export const CampaignCard = ({ image, title, description, onReadMore }) => {
         />
         {/* <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" /> */}
       </div>
-      <CardContent className="bg-grey p-8 space-y-4 ">
-        <h3 className="text-2xl md:text-3xl font-bold text-foreground leading-tight uppercase tracking-tight transition-colors duration-300 group-hover:text-yellow-600">
+      <CardContent className="bg-grey p-1 lg:p-5 sm:p-3 space-y-4 ">
+        <h3 className="text-xl md:text-2xl font-bold text-foreground leading-tight uppercase tracking-tight transition-colors duration-300 group-hover:text-yellow-600">
           {title}
         </h3>
         <p className="text-muted-foreground leading-relaxed">

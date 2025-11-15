@@ -7,6 +7,7 @@ import PetitionSection from "../components/PetitionSection.jsx";
 import SocialAwarenessSection from "../components/SocialAwarenessSection.jsx";
 import DonationSection from "../components/DonationSection.jsx";
 import FooterSection from "@/components/footer.jsx";
+import FAQsThree from "../components/frq.jsx";
 function Home() {
   return (
     <div>
@@ -19,7 +20,9 @@ function Home() {
         <CampaignsCarousel />
         <SocialAwarenessSection />
         <DonationSection />
+        <FAQsThree />
         <FooterSection />
+
        
       </div>
     </div>

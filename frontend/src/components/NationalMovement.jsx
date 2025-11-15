@@ -35,7 +35,7 @@ export const NationalMovement = () => {
           <p className="mb-3 text-sm text-[#f0b429] font-bold uppercase tracking-wider text-section-label">
             — The Victims of Racism
           </p>
-          <h2 className="text-4xl font-bold uppercase tracking-tight text-heading md:text-5xl lg:text-6xl">
+          <h2 className="text-3xl font-bold uppercase tracking-tight text-heading md:text-4xl lg:text-5xl">
             The National Movement
           </h2>
         </div>

@@ -13,7 +13,7 @@ export default function IntegrationsSection() {
                         <div className="space-y-6">
                             <h2 className="text-white text-3xl font-semibold md:text-4xl lg:text-5xl">Integrate with your favorite LLMs</h2>
                             <p className="text-white">Connect seamlessly with popular platforms and services to enhance your workflow.</p>
-                            <Button className={"bg-[#4b4bbe]"}
+                            <Button className={"bg-[#0303ca] hover:bg-blue-800 text-primary-foreground font-medium transition-all duration-300"}
                                 variant="outline"
                                 size="sm"
                                 asChild>

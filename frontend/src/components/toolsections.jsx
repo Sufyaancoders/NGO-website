@@ -38,8 +38,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header Section */}
-      <header className="border-b border-border bg-card/50 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-8 md:py-12">
+      <header className="border-b border-border flex items-center justify-center bg-card/50 backdrop-blur-sm">
+        <div className="container mx-auto px-4 py-8 md:py-12 flex flex-col items-center text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-3">
             Internal NGO Tools
           </h1>
@@ -50,7 +50,7 @@ const Index = () => {
       </header>
 
       {/* Tools Grid Section */}
-      <main className="container mx-auto px-4 py-12 md:py-16 lg:py-20">
+      <main className="container mx-auto px-4 py-12 md:py-18 lg:py-25">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {tools.map((tool, index) => (
             <ToolCard
@@ -64,14 +64,7 @@ const Index = () => {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-border bg-card/30 mt-16">
-        <div className="container mx-auto px-4 py-8 text-center">
-          <p className="text-muted-foreground">
-            © 2025 Our NGO. Making a difference together.
-          </p>
-        </div>
-      </footer>
+      
     </div>
   );
 };
