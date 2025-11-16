@@ -5,9 +5,9 @@ export const MovementCard = ({ icon, title, subtitle }) => {
   const Icon = icon;
   return (
     <Card className="group cursor-pointer transition-all hover:shadow-lg hover:-translate-y-1">
-      <CardContent className="p-8 text-center">
+      <CardContent className="p-2 sm:p-3 lg:p-4 text-center">
         <div className="mb-6 flex justify-center">
-          <Icon className="h-16 w-16 stroke-[1.5] text-[#f0b429]" />
+          <Icon className="h-14 w-14 stroke-[1.5] text-[#f0b429]" />
         </div>
         <h3 className="mb-2 text-xl font-bold uppercase tracking-tight text-heading">
           {title}

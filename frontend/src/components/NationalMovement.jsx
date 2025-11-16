@@ -56,7 +56,7 @@ export const NationalMovement = () => {
         <div className="grid gap-0 overflow-hidden rounded-lg shadow-xl md:grid-cols-2">
           {/* Left - CTA */}
           <div className="flex flex-col justify-center bg-primary p-12 text-primary-foreground md:p-16">
-            <h3 className="mb-8 text-3xl font-bold uppercase leading-tight md:text-4xl lg:text-5xl">
+            <h3 className="mb-8 text-2xl font-bold uppercase leading-tight md:text-3xl lg:text-4xl">
               One Thing You Can Do Right Now
             </h3>
             <div className="inline-block">

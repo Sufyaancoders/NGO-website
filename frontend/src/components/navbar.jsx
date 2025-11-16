@@ -3,6 +3,7 @@ import { Menu } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import placeholderLogo from "../assets/logo/logo_page-0001.jpg";
+import { useSelector } from "react-redux";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
    const navigate = useNavigate();
@@ -13,7 +14,7 @@ const Navbar = () => {
     { label: "DONATIONS", path: "/donations" },
     { label: "CONTACT", path: "/contact" },
   ];
-
+ const { token } = useSelector((state) => state.auth)
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-border ">
       {/* Debug color test */}
@@ -60,7 +61,8 @@ const Navbar = () => {
               variant="donation"
               size="donation"
               className="w-40 mr-6"
-              onClick={() => navigate('/donations')}
+              onClick={() =>token==null?navigate('/auth/login'):navigate('/donations')}
+              
             >
               MAKE A DONATION
             </Button>

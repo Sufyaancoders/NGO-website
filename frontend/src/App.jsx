@@ -8,8 +8,9 @@ import Navbar from './components/navbar.jsx'
 import About from './pages/about.jsx'
 import Contact from './pages/contact.jsx'
 import Donations from './pages/donations.jsx'
-import Petition from './pages/petition.jsx'
-import Blog from './pages/blog.jsx'
+import Login from './pages/auth.pages/login.jsx'
+import OpenRoute from './components/core/Auth/openRoutes.jsx'
+import Signup from './pages/auth.pages/signup.jsx'
 import Tools from './pages/tools.jsx'
 function App() {
 
@@ -24,9 +25,18 @@ function App() {
    <Route path="/about" element={<About />} />
    <Route path="/contact" element={<Contact />} />
    <Route path="/donations" element={<Donations />} />
-   <Route path="/petition" element={<Petition />} />
-   <Route path="/blog" element={<Blog />} />
    <Route path="/tools" element={<Tools />} />
+  
+   <Route path="/auth/login" element={
+     <OpenRoute>
+       <Login /> 
+     </OpenRoute>
+   } />
+   <Route path="/auth/signup" element={
+     <OpenRoute>
+       <Signup /> 
+     </OpenRoute>
+   } />
 </Routes>
     </>
   )

@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
+import { useSelector } from "react-redux";
 
+import { useNavigate } from "react-router-dom";
 const DonationSection = () => {
   const [selectedAmount, setSelectedAmount] = useState(10);
   const [customAmount, setCustomAmount] = useState("");
   const [isCustom, setIsCustom] = useState(false);
-
+const { token } = useSelector((state) => state.auth);
+const navigate = useNavigate();
   const presetAmounts = [10, 20, 50, 100];
 
   const handlePresetClick = (amount) => {
@@ -25,6 +28,12 @@ const DonationSection = () => {
     if (amount && amount > 0) {
       console.log(`Donating $${amount}`);
       // Here you would integrate with your payment processor
+    }
+    try{
+      token ? navigate('/donations') : navigate('/auth/login');
+
+    }catch(error){
+      console.error("Donation failed:", error);
     }
   };
 
@@ -56,7 +65,7 @@ const DonationSection = () => {
         <div className="flex justify-center items-center mb-8">
           <div className="flex items-stretch border border-border rounded-md overflow-hidden shadow-sm max-w-xs w-full">
             <div className="bg-yellow-500 w-12 px-6 flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">$</span>
+              <span className="text-primary-foreground font-bold text-xl">₹</span>
             </div>
             <Input
               type="number"
@@ -80,15 +89,15 @@ const DonationSection = () => {
               key={amount}
               variant={selectedAmount === amount && !isCustom ? "default" : "outline"}
               onClick={() => handlePresetClick(amount)}
-              className="min-w-[100px] bg-blue-800  h-12 text-base font-semibold"
+              className="min-w-[100px] bg-blue-800  h-12 text-white font-semibold"
             >
-              ${amount}
+              ₹{amount} 
             </Button>
           ))}
           <Button
             variant={isCustom ? "default" : "outline"}
             onClick={handleCustomClick}
-            className="min-w-[200px] h-12  bg-white text-base font-semibold"
+            className="min-w-[200px] h-12  bg-white text-black font-semibold"
           >
             GIVE A CUSTOM AMOUNT
           </Button>

@@ -1,5 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useSelector } from "react-redux";
+
+import { useNavigate } from "react-router-dom";
 import {
   Select,
   SelectContent,
@@ -15,9 +18,26 @@ const DonationForm = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const { toast } = useToast();
-
+const { token } = useSelector((state) => state.auth);
+const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("Token value:", token); // Debugging token value
+    if (!token) {
+      console.log("Token is null or undefined. Navigating to /auth/login");
+      try {
+        navigate('/auth/login');
+      } catch (error) {
+        console.error("Navigation to /auth/login failed:", error);
+      }
+    } else {
+      console.log("Token exists. Navigating to /donations");
+      try {
+        navigate('/donations');
+      } catch (error) {
+        console.error("Navigation to /donations failed:", error);
+      }
+    }
     toast({
       title: "Thank you for your donation!",
       description: "We'll process your contribution shortly.",
@@ -40,11 +60,11 @@ const DonationForm = () => {
                 <SelectValue placeholder="Amount" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="10">$10</SelectItem>
-                <SelectItem value="25">$25</SelectItem>
-                <SelectItem value="50">$50</SelectItem>
-                <SelectItem value="100">$100</SelectItem>
-                <SelectItem value="250">$250</SelectItem>
+                <SelectItem value="10">rs10</SelectItem>
+                <SelectItem value="25">rs25</SelectItem>
+                <SelectItem value="50">rs50</SelectItem>
+                <SelectItem value="100">rs100</SelectItem>
+                <SelectItem value="250">rs250</SelectItem>
                 <SelectItem value="custom">Custom Amount</SelectItem>
               </SelectContent>
             </Select>
