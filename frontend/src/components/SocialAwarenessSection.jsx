@@ -47,14 +47,14 @@ const SocialAwarenessSection = () => {
               </span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase leading-tight mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase leading-tight mb-6">
               Social Awareness
               <br />
               In The USA
             </h2>
 
             <div className="mb-8">
-              <div className="text-yellow-500 text-6xl md:text-7xl font-black mb-3">
+              <div className="text-yellow-500 text-5xl md:text-6xl font-black mb-3">
                 4.5%
               </div>
               <p className="text-[gray] text-base md:text-lg leading-relaxed">
@@ -92,7 +92,7 @@ const SocialAwarenessSection = () => {
           {/* Subscribe Form */}
           <div className="bg-blue-700 text-black p-4 md:p-8 lg:p-10 flex flex-col justify-center">
             <div className="max-w-xl mx-auto w-full">
-              <h2 className="text-3xl text-cyan-50 md:text-4xl lg:text-5xl font-black uppercase leading-tight mb-4">
+              <h2 className="text-2xl text-cyan-50 md:text-3xl lg:text-4xl font-black uppercase leading-tight mb-4">
                 Join The Community Of
                 <br />
                 Over A Million People
@@ -112,7 +112,7 @@ const SocialAwarenessSection = () => {
                   <Button
                     type="submit"
                     size="lg"
-                    className="bg-[gray] hover:bg-[#4d4a4a] text-white font-bold uppercase tracking-wider px-8 h-14 text-sm"
+                    className="bg-[#756f6f] hover:bg-[#4d4a4a] text-white font-bold uppercase tracking-wider px-8 h-14 text-sm"
                   >
                     Subscribe
                   </Button>
