@@ -3,6 +3,7 @@ import { Play, Pause } from "lucide-react";
 import heroPortrait from "../assets/hero-portrait.jpg";
 import { useState, useRef } from "react";
 import { NationalMovement } from "./NationalMovement";
+import { EncryptedText } from "@/components/ui/encrypted-text";
 
 const AboutSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -62,9 +63,13 @@ const AboutSection = () => {
             </div>
             
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              ACTIVE & CARING
-              <br />
-              COMMUNITY
+              <EncryptedText
+                text="ACTIVE & CARING COMMUNITY"
+                encryptedClassName="text-gray-400"
+                revealedClassName="text-white"
+                revealDelayMs={30}
+                flipDelayMs={30}
+              />
             </h2>
 
             <p className="text-gray-200 text-lg leading-relaxed">

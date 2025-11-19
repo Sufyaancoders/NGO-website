@@ -4,6 +4,7 @@ import { Checkbox } from "../components/ui/checkbox";
 import { useState } from "react";
 import { toast } from "sonner";
 import unityHandsImage from "../assets/handshake.jpg";
+import { EncryptedText } from "@/components/ui/encrypted-text";
 
 const SocialAwarenessSection = () => {
   const [email, setEmail] = useState("");
@@ -48,9 +49,13 @@ const SocialAwarenessSection = () => {
             </div>
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase leading-tight mb-6">
-              Social Awareness
-              <br />
-              In The USA
+              <EncryptedText
+                text="Social Awareness In The USA"
+                encryptedClassName="text-gray-400"
+                revealedClassName="text-white"
+                revealDelayMs={30}
+                flipDelayMs={30}
+              />
             </h2>
 
             <div className="mb-8">

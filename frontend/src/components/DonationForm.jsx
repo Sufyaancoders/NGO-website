@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useSelector } from "react-redux";
-
+import { EncryptedTextDemoSecond } from "./EncryptedText";
 import { useNavigate } from "react-router-dom";
 import {
   Select,
@@ -48,7 +48,7 @@ const navigate = useNavigate();
     <section className="bg-[#dedede] lg:py-16 py-4 sm:py-8 px-4">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-4xl font-bold text-black mb-8 text-center">
-          We Need Your Help
+          <EncryptedTextDemoSecond />
         </h2>
         <form
           onSubmit={handleSubmit}

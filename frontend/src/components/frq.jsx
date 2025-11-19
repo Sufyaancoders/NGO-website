@@ -40,7 +40,7 @@ export default function FAQsThree() {
     ]
 
     return (
-        <section className="bg-white relative border-t-3  dark:bg-amber-50 py-15">
+        <section className="bg-white relative border-t-3  dark:bg-amber-50 py-20 ">
             <div className="mx-auto max-w-5xl px-4 md:px-6">
                 <div className="flex flex-col gap-10 md:flex-row md:gap-16">
                     <div className="md:w-1/3">

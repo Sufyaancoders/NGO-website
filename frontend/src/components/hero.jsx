@@ -5,6 +5,7 @@ import heroBackground2 from "../assets/hero-background-2.jpg";
 import heroBackground3 from "../assets/child.jpg";
 import SocialSidebar from "./SocialSidebar.jsx";
 import { ScrollBasedVelocityDemo } from "../components/common/textScroll";
+import { TextGenerateEffectDemo } from "../components/ui/textt.jsx";
 const slides = [
   {
     image: heroBackground1,
@@ -134,10 +135,10 @@ const Hero = () => {
             <div className="flex flex-col text-center w-full mb-20">
               <h2 className="text-sm text-indigo-500 tracking-widest font-medium title-font mb-1">ROOF PARTY POLAROID</h2>
               <h1 className="sm:text-4xl text-3xl lg:text-5xl font-medium bold title-font mb-4 text-gray-900">Master Cleanse Reliac Heirloom</h1>
-              <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
+              <p className="lg:w-2/3 mx-auto leading-relaxed text-base"><TextGenerateEffectDemo /></p>
             </div>
-            <div className="flex flex-wrap">
-              <div className="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+            <div className="flex flex-wrap  bg-gray-100 ">
+              <div className="xl:w-1/4 lg:w-1/2 md:w-full px-6 py-8 border-2 border-gray-300 border-opacity-60">
                 <h2 className="text-xl lg:text-3xl sm:text-2xl text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
                 <p className="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
                 <a className="text-indigo-500 inline-flex items-center">Learn More
@@ -146,7 +147,7 @@ const Hero = () => {
                   </svg>
                 </a>
               </div>
-              <div className="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+              <div className="xl:w-1/4 lg:w-1/2 md:w-full px-6 py-8 border-2 border-gray-300 border-opacity-60">
                 <h2 className="text-xl lg:text-3xl sm:text-2xl text-gray-900 font-medium title-font mb-2">The Catalyzer</h2>
                 <p className="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
                 <a className="text-indigo-500 inline-flex items-center">Learn More
@@ -155,7 +156,7 @@ const Hero = () => {
                   </svg>
                 </a>
               </div>
-              <div className="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+              <div className="xl:w-1/4 lg:w-1/2 md:w-full px-6 py-8 border-2 border-gray-300 border-opacity-60">
                 <h2 className="text-xl lg:text-3xl sm:text-2xl text-gray-900 font-medium title-font mb-2">Neptune</h2>
                 <p className="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
                 <a className="text-indigo-500 inline-flex items-center">Learn More
@@ -164,7 +165,7 @@ const Hero = () => {
                   </svg>
                 </a>
               </div>
-              <div className="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+              <div className="xl:w-1/4 lg:w-1/2 md:w-full px-6 py-8 border-2 border-gray-300 border-opacity-60">
                 <h2 className="text-xl lg:text-3xl sm:text-2xl text-gray-900 font-medium title-font mb-2">Melanchole</h2>
                 <p className="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
                 <a className="text-indigo-500 inline-flex items-center">Learn More
@@ -174,7 +175,7 @@ const Hero = () => {
                 </a>
               </div>
             </div>
-            <button className="flex mx-auto mt-16 text-white bg-blue-900 border-0 py-2 px-8 focus:outline-none hover:bg-blue-800 rounded text-lg">Button</button>
+            <button className="flex mx-auto mt-16 text-white bg-blue-800 border-0 py-3 px-10 focus:outline-none hover:bg-blue-700 rounded text-lg">Button</button>
           </div>
         </section>
       </div>

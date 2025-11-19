@@ -2,6 +2,7 @@ import { Handshake, Network, Bug, Target } from "lucide-react";
 import { MovementCard } from "./common/MovementCard";
 import { Button } from "../components/ui/button";
 import heroImage from "../assets/hero-heart.jpg";
+import { EncryptedText } from "@/components/ui/encrypted-text";
 
 export const NationalMovement = () => {
   const movements = [
@@ -57,7 +58,13 @@ export const NationalMovement = () => {
           {/* Left - CTA */}
           <div className="flex flex-col justify-center bg-primary p-12 text-primary-foreground md:p-16">
             <h3 className="mb-8 text-2xl font-bold uppercase leading-tight md:text-3xl lg:text-4xl">
-              One Thing You Can Do Right Now
+              <EncryptedText
+                text="One Thing You Can Do Right Now"
+                encryptedClassName="text-blue-300"
+                revealedClassName="text-white"
+                revealDelayMs={30}
+                flipDelayMs={30}
+              />
             </h3>
             <div className="inline-block">
               <Button

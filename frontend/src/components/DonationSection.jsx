@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { useSelector } from "react-redux";
-
+import TrueFocus from './TrueFocus';
 import { useNavigate } from "react-router-dom";
 const DonationSection = () => {
   const [selectedAmount, setSelectedAmount] = useState(10);
@@ -53,7 +53,17 @@ const navigate = useNavigate();
 
         {/* Main Heading */}
         <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-          MAKE A DONATION
+          {/* MAKE A DONATION */}
+      
+
+<TrueFocus 
+sentence="MAKE A DONATION"
+manualMode={false}
+blurAmount={5}
+borderColor="red"
+animationDuration={2}
+pauseBetweenAnimations={1}
+/>
         </h2>
 
         {/* Subtitle */}
