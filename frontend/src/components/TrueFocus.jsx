@@ -35,16 +35,21 @@ const TrueFocus = ({
     if (currentIndex === null || currentIndex === -1) return;
     if (!wordRefs.current[currentIndex] || !containerRef.current) return;
 
-    const parentRect = containerRef.current.getBoundingClientRect();
-    const activeRect = wordRefs.current[currentIndex].getBoundingClientRect();
+    // Use requestAnimationFrame for smooth updates
+    const updateRect = () => {
+      const parentRect = containerRef.current.getBoundingClientRect();
+      const activeRect = wordRefs.current[currentIndex].getBoundingClientRect();
 
-    setFocusRect({
-      x: activeRect.left - parentRect.left,
-      y: activeRect.top - parentRect.top,
-      width: activeRect.width,
-      height: activeRect.height
-    });
-  }, [currentIndex, words.length]);
+      setFocusRect({
+        x: activeRect.left - parentRect.left,
+        y: activeRect.top - parentRect.top,
+        width: activeRect.width,
+        height: activeRect.height
+      });
+    };
+
+    requestAnimationFrame(updateRect);
+  }, [currentIndex]);
 
   const handleMouseEnter = index => {
     if (manualMode) {

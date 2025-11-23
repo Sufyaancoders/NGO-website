@@ -43,7 +43,7 @@ const Hero = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setCurrentSlide(index);
-    setTimeout(() => setIsTransitioning(false), 600);
+    setTimeout(() => setIsTransitioning(false), 400);
   };
 
   return (

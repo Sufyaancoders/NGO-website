@@ -86,10 +86,13 @@ const Donations = () => {
     useEffect(() => {
         let t;
         if (loading) {
-            // simulate progress ramp
+            // Optimized progress ramp with longer interval
             t = setInterval(() => {
-                setProgress((p) => Math.min(95, p + Math.random() * 12));
-            }, 300);
+                setProgress((p) => {
+                    const next = p + Math.random() * 15;
+                    return next >= 95 ? 95 : next;
+                });
+            }, 500);
         } else {
             setProgress(0);
         }
@@ -119,19 +122,19 @@ const Donations = () => {
 
         setLoading(true);
         setSuccess("");
-        // simulate network call
-            setTimeout(() => {
+        // Optimized network call simulation
+        setTimeout(() => {
             // finish progress
             setProgress(100);
             const add = parseFloat(form.amount);
             setDonatedAmount((d) => d + add);
-                setDonationDates((ds) => [...ds, new Date()]);
+            setDonationDates((ds) => [...ds, new Date()]);
             setLoading(false);
             setForm({ name: "", email: "", amount: "", message: "" });
             setSuccess("Thank you — your donation was received!");
             // reset progress visually after a short delay
-            setTimeout(() => setProgress(0), 800);
-        }, 1400 + Math.random() * 1200);
+            setTimeout(() => setProgress(0), 500);
+        }, 1000);
     }
 
             // Tiny util to format date + time

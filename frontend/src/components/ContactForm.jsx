@@ -29,8 +29,7 @@ export default function ContactForm() {
 
         try {
             // Simulate form submission - replace with your actual API call
-            await new Promise(resolve => setTimeout(resolve, 1000));
-            
+            // Removed artificial delay for better UX
             console.log('Form submitted:', formData);
             setSubmitStatus('success');
             
