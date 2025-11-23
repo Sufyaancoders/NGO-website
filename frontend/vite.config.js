@@ -22,29 +22,35 @@ export default defineConfig({
         manualChunks(id) {
           if (!id.includes('node_modules')) return
 
-          // Combine React with React-DOM for better caching
-          if (id.includes('react') || id.includes('react-dom')) return 'react-vendor'
+          // Order matters: check react-dom BEFORE react
+          if (id.includes('react-dom')) return 'react-dom-vendor'
+          if (id.includes('react/') || id.includes('react\\')) return 'react-core-vendor'
+          if (id.includes('scheduler')) return 'react-core-vendor'
           
-          // Group UI libraries together to reduce HTTP requests
-          if (id.includes('motion') || id.includes('@radix-ui') || id.includes('lucide-react') || 
-              id.includes('@fortawesome') || id.includes('embla-carousel')) return 'ui-vendor'
+          // Animation library (can be large)
+          if (id.includes('motion') || id.includes('framer-motion')) return 'motion-vendor'
           
-          // Combine state management and routing
-          if (id.includes('@reduxjs/toolkit') || id.includes('react-redux') || 
-              id.includes('react-router')) return 'core-vendor'
+          // Radix UI components
+          if (id.includes('@radix-ui')) return 'radix-vendor'
           
-          // Everything else in vendor
+          // Icons and UI utilities
+          if (id.includes('lucide-react') || id.includes('@fortawesome')) return 'icons-vendor'
+          
+          // Carousel
+          if (id.includes('embla-carousel')) return 'carousel-vendor'
+          
+          // State management
+          if (id.includes('@reduxjs/toolkit') || id.includes('react-redux')) return 'redux-vendor'
+          
+          // Routing
+          if (id.includes('react-router')) return 'router-vendor'
+          
+          // Everything else
           return 'vendor'
         },
       },
     },
-    chunkSizeWarningLimit: 1000,
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-    },
+    chunkSizeWarningLimit: 800,
+    minify: 'esbuild',
   },
 })
